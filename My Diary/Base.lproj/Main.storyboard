@@ -62,11 +62,71 @@
                     </view>
                     <connections>
                         <outlet property="textArea" destination="rMm-Q4-cgx" id="jQV-YB-Tta"/>
+                        <segue destination="r8j-te-7gs" kind="show" identifier="toDetailStorySegue" id="XqO-yw-b1s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94.20289855072464" y="-3.3482142857142856"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="PJR-gk-UvK">
+            <objects>
+                <viewController id="r8j-te-7gs" customClass="DetailViewController" customModule="My_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l03-5J-cea">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-zf-7Ex">
+                                <rect key="frame" x="22" y="22" width="370" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-vh-QyL">
+                                <rect key="frame" x="22" y="80" width="370" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2i-7F-n5Z">
+                                <rect key="frame" x="22" y="754" width="370" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EgZ-jJ-kSE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ok">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneAction:" destination="r8j-te-7gs" eventType="touchUpInside" id="Ys9-vg-DXC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x2L-ER-a17"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u2i-7F-n5Z" firstAttribute="leading" secondItem="x2L-ER-a17" secondAttribute="leading" constant="22" id="Fcp-Fd-Gbu"/>
+                            <constraint firstItem="x2L-ER-a17" firstAttribute="trailing" secondItem="u2i-7F-n5Z" secondAttribute="trailing" constant="22" id="Gjh-8H-ENz"/>
+                            <constraint firstItem="x2L-ER-a17" firstAttribute="bottom" secondItem="u2i-7F-n5Z" secondAttribute="bottom" constant="10" id="RSn-KU-u97"/>
+                            <constraint firstItem="Hya-zf-7Ex" firstAttribute="top" secondItem="x2L-ER-a17" secondAttribute="top" constant="22" id="WjE-4U-WGr"/>
+                            <constraint firstItem="x2L-ER-a17" firstAttribute="trailing" secondItem="Hya-zf-7Ex" secondAttribute="trailing" constant="22" id="gfq-0y-Nn3"/>
+                            <constraint firstItem="kFV-vh-QyL" firstAttribute="leading" secondItem="Hya-zf-7Ex" secondAttribute="leading" id="hoh-lH-Mh9"/>
+                            <constraint firstItem="kFV-vh-QyL" firstAttribute="trailing" secondItem="Hya-zf-7Ex" secondAttribute="trailing" id="iNE-CL-Cdl"/>
+                            <constraint firstItem="kFV-vh-QyL" firstAttribute="top" secondItem="Hya-zf-7Ex" secondAttribute="bottom" constant="10" id="jjh-MS-IFu"/>
+                            <constraint firstItem="Hya-zf-7Ex" firstAttribute="leading" secondItem="x2L-ER-a17" secondAttribute="leading" constant="22" id="pl7-xC-M6w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8yv-Zz-rMn"/>
+                    <connections>
+                        <outlet property="storyLabel" destination="kFV-vh-QyL" id="u4c-R1-ZkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egQ-Zx-JuX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-3"/>
         </scene>
     </scenes>
     <resources>

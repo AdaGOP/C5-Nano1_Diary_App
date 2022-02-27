@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextViewDelegate {
+class ViewController: UIViewController, UITextViewDelegate, DetailViewControllerDelegate {
 
     /* Here we learn how we use UI Input element such as UITextView, and how we need the IBOutlet connection to manage (update the value) of the UI element it self. */
     @IBOutlet weak var textArea: UITextView!
@@ -35,17 +35,24 @@ class ViewController: UIViewController, UITextViewDelegate {
         // Now let's do some small validation, we won't let user able to save it unless user has input something onto the textview element.
         
         // Let's create an Alert once, but able to provoke different value of message
-        if textArea.text.isEmpty || textArea.text == "" {
-            displayAlert(title: "Warning!", body: "Please input something first before it saved!")
+        if textArea.text.isEmpty || textArea.text == "" || textArea.text == "Input your story here..." {
+            displayAlert(title: "Warning!", body: "Please input something first before it saved!", isDisplayDetail: false)
         } else {
-            displayAlert(title: "Yeayyy!", body: "Diary has been saved!")
+            displayAlert(title: "Yeayyy!", body: "Diary has been saved!", isDisplayDetail: true)
         }
     }
     
-    func displayAlert(title: String, body: String) {
+    func displayAlert(title: String, body: String, isDisplayDetail: Bool) {
         let alert = UIAlertController.init(title: title, message: body, preferredStyle: UIAlertController.Style.alert)
         let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.default) { action in
-            alert.dismiss(animated: true, completion: nil)
+            alert.dismiss(animated: true) {
+                // We need to enter to detail page, using segue manually so we need to trigger the segue movement after user press ok from alert message
+                
+                // Since manual segue need the identifier, so we need to create identity to our segue from storyboard
+                if isDisplayDetail {
+                    self.performSegue(withIdentifier: "toDetailStorySegue", sender: self)
+                }
+            }
         }
         alert.addAction(alertAction)
         self.present(alert, animated: true, completion: nil)
@@ -69,6 +76,21 @@ class ViewController: UIViewController, UITextViewDelegate {
             return false
         }
         return true
+    }
+    
+    // Now we want to sent the story value to detail page and display it there, so we need this method in order to do that
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailStorySegue" {
+            let detailVC = segue.destination as? DetailViewController
+            detailVC?.storyMessage = story
+            // since we already subscribe the delegate from second page, we need to connect it to here
+            detailVC?.delegate = self
+        }
+    }
+    
+    // This displayAlert method available to use here, because we already subscribe the delegate from the detail page.
+    func displayAlert() {
+        self.displayAlert(title: "Ok", body: "Yeayyy it works!", isDisplayDetail: false)
     }
 }
 
