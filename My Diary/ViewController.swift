@@ -9,17 +9,23 @@ import UIKit
 
 class ViewController: UIViewController, UITextViewDelegate, DetailViewControllerDelegate {
 
+    // MARK: - Input element & outlet connection
+    
     /* Here we learn how we use UI Input element such as UITextView, and how we need the IBOutlet connection to manage (update the value) of the UI element it self. */
     @IBOutlet weak var textArea: UITextView!
 
     /* Here we learn how we use UI element as controls such as UIButton */
     //@IBOutlet weak var saveButton: UIButton!
     
+    // MARK: - Object initialization & Optional
+    
     /* Now we learn on how we manage optional string to our alert message */
     var messageTitle: String?
     var messageBody: String?
-    
     var story: String?
+    
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,8 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
         textArea.delegate = self
     }
 
+    // MARK: - Controls
+    
     /* Here we know that every UI element that act as controls has an action that can be define directly without Outlet connection needed */
     @IBAction func saveAction(_ sender: UIButton) {
         // Now let's do some small validation, we won't let user able to save it unless user has input something onto the textview element.
@@ -41,6 +49,8 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
             displayAlert(title: "Yeayyy!", body: "Diary has been saved!", isDisplayDetail: true)
         }
     }
+    
+    // MARK: - Function
     
     func displayAlert(title: String, body: String, isDisplayDetail: Bool) {
         let alert = UIAlertController.init(title: title, message: body, preferredStyle: UIAlertController.Style.alert)
@@ -60,6 +70,7 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
     
     /* Now we want to know, if user has start to input something to our UITextView element, so we can do something with it. But first, let's learn about `delegate`. UITextView has built in method that we can use to detect if it's start editing or end editing. But in order to use that method, we need to have the `delegate` from it's UITextView. */
     
+    // MARK: - Delegate method from UITextViewDelegate
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         // Let's clear up our text area, so then user can start to write their story
@@ -78,6 +89,9 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
         return true
     }
     
+    
+    // MARK: - Segue
+    
     // Now we want to sent the story value to detail page and display it there, so we need this method in order to do that
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailStorySegue" {
@@ -87,6 +101,9 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
             detailVC?.delegate = self
         }
     }
+    
+    
+    // MARK: - Our own delegate method
     
     // This displayAlert method available to use here, because we already subscribe the delegate from the detail page.
     func displayAlert() {
