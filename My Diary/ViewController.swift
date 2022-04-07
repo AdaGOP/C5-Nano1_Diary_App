@@ -13,7 +13,18 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
     
     /* Here we learn how we use UI Input element such as UITextView, and how we need the IBOutlet connection to manage (update the value) of the UI element it self. */
     @IBOutlet weak var textArea: UITextView!
-
+    @IBOutlet weak var cancelButton: UIButton! {
+        didSet {
+            cancelButton.drawARoundedCorner()
+            cancelButton.drawABorder()
+        }
+    }
+    @IBOutlet weak var saveButton: UIButton! {
+        didSet {
+            saveButton.drawARoundedCorner()
+        }
+    }
+    
     /* Here we learn how we use UI element as controls such as UIButton */
     //@IBOutlet weak var saveButton: UIButton!
     
