@@ -11,7 +11,6 @@
 		E633443A27FD653500D6F7D8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633443927FD653500D6F7D8 /* HistoryViewController.swift */; };
 		E633443C27FD65A000D6F7D8 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633443B27FD65A000D6F7D8 /* HistoryCell.swift */; };
 		E633443E27FD7BA300D6F7D8 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633443D27FD7BA300D6F7D8 /* UIButton+Extension.swift */; };
-		E66E6C1227CB0B5F001B2BEC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66E6C1127CB0B5F001B2BEC /* DetailViewController.swift */; };
 		E6FDFEDF27C681EC0040519C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FDFEDE27C681EC0040519C /* AppDelegate.swift */; };
 		E6FDFEE127C681EC0040519C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FDFEE027C681EC0040519C /* SceneDelegate.swift */; };
 		E6FDFEE327C681EC0040519C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FDFEE227C681EC0040519C /* ViewController.swift */; };
@@ -25,7 +24,6 @@
 		E633443927FD653500D6F7D8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E633443B27FD65A000D6F7D8 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		E633443D27FD7BA300D6F7D8 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		E66E6C1127CB0B5F001B2BEC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E6FDFEDB27C681EC0040519C /* My Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FDFEDE27C681EC0040519C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6FDFEE027C681EC0040519C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				E6FDFEDE27C681EC0040519C /* AppDelegate.swift */,
 				E6FDFEE027C681EC0040519C /* SceneDelegate.swift */,
 				E6FDFEE227C681EC0040519C /* ViewController.swift */,
-				E66E6C1127CB0B5F001B2BEC /* DetailViewController.swift */,
 				E633443927FD653500D6F7D8 /* HistoryViewController.swift */,
 				E633443B27FD65A000D6F7D8 /* HistoryCell.swift */,
 				E6FDFEE427C681EC0040519C /* Main.storyboard */,
@@ -159,7 +156,6 @@
 				E6FDFEDF27C681EC0040519C /* AppDelegate.swift in Sources */,
 				E6FDFEE127C681EC0040519C /* SceneDelegate.swift in Sources */,
 				E633443A27FD653500D6F7D8 /* HistoryViewController.swift in Sources */,
-				E66E6C1227CB0B5F001B2BEC /* DetailViewController.swift in Sources */,
 				E633443E27FD7BA300D6F7D8 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
