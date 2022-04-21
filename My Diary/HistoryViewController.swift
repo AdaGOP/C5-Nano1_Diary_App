@@ -11,7 +11,13 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var historyLists = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var historyLists: [HistoryModel] = [HistoryModel(historyDay: "Sunday"),
+                                        HistoryModel(historyDay: "Monday"),
+                                        HistoryModel(historyDay: "Tuesday"),
+                                        HistoryModel(historyDay: "Wednesday"),
+                                        HistoryModel(historyDay: "Thursday"),
+                                        HistoryModel(historyDay: "Friday"),
+                                        HistoryModel(historyDay: "Saturday")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +33,7 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "historyCellID", for: indexPath) as? HistoryCell)!
-        cell.historyTitle.text = historyLists[indexPath.row]
+        cell.historyTitle.text = historyLists[indexPath.row].historyDay
         return cell
     }
     

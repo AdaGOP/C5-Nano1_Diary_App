@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E625B6FF2811197F0073021E /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E625B6FE2811197F0073021E /* HistoryModel.swift */; };
 		E633443A27FD653500D6F7D8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633443927FD653500D6F7D8 /* HistoryViewController.swift */; };
 		E633443C27FD65A000D6F7D8 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633443B27FD65A000D6F7D8 /* HistoryCell.swift */; };
 		E633443E27FD7BA300D6F7D8 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633443D27FD7BA300D6F7D8 /* UIButton+Extension.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E625B6FE2811197F0073021E /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		E633443927FD653500D6F7D8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E633443B27FD65A000D6F7D8 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		E633443D27FD7BA300D6F7D8 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				E6FDFEE927C681ED0040519C /* LaunchScreen.storyboard */,
 				E6FDFEEC27C681ED0040519C /* Info.plist */,
 				E633443D27FD7BA300D6F7D8 /* UIButton+Extension.swift */,
+				E625B6FE2811197F0073021E /* HistoryModel.swift */,
 			);
 			path = "My Diary";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E625B6FF2811197F0073021E /* HistoryModel.swift in Sources */,
 				E633443C27FD65A000D6F7D8 /* HistoryCell.swift in Sources */,
 				E6FDFEE327C681EC0040519C /* ViewController.swift in Sources */,
 				E6FDFEDF27C681EC0040519C /* AppDelegate.swift in Sources */,
