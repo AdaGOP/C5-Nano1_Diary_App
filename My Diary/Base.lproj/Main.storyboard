@@ -145,7 +145,6 @@
                         <outlet property="cancelButton" destination="Fur-dM-GFz" id="JVK-71-gkn"/>
                         <outlet property="saveButton" destination="80c-yi-S2g" id="yC2-o7-Xzj"/>
                         <outlet property="textArea" destination="vrC-LQ-KR8" id="sgt-gH-d3F"/>
-                        <segue destination="r8j-te-7gs" kind="show" identifier="toDetailStorySegue" id="5Bf-l6-Vdn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElY-rn-65D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,23 +174,23 @@
             <objects>
                 <viewController id="r8j-te-7gs" customClass="DetailViewController" customModule="My_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l03-5J-cea">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-zf-7Ex">
-                                <rect key="frame" x="22" y="22" width="370" height="48"/>
+                                <rect key="frame" x="22" y="66" width="370" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-vh-QyL">
-                                <rect key="frame" x="22" y="80" width="370" height="21"/>
+                                <rect key="frame" x="22" y="124" width="370" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2i-7F-n5Z">
-                                <rect key="frame" x="22" y="754" width="370" height="44"/>
+                                <rect key="frame" x="22" y="808" width="370" height="44"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="EgZ-jJ-kSE"/>

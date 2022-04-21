@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextViewDelegate, DetailViewControllerDelegate {
+class ViewController: UIViewController, UITextViewDelegate {
 
     // MARK: - Input element & outlet connection
     
@@ -28,13 +28,7 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
     /* Here we learn how we use UI element as controls such as UIButton */
     //@IBOutlet weak var saveButton: UIButton!
     
-    // MARK: - Object initialization & Optional
-    
-    /* Now we learn on how we manage optional string to our alert message */
-    var messageTitle: String?
-    var messageBody: String?
-    var story: String?
-    
+    var story = ""
     
     // MARK: - View Life Cycle
     
@@ -67,11 +61,8 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
         let alert = UIAlertController.init(title: title, message: body, preferredStyle: UIAlertController.Style.alert)
         let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.default) { action in
             alert.dismiss(animated: true) {
-                // We need to enter to detail page, using segue manually so we need to trigger the segue movement after user press ok from alert message
-                
-                // Since manual segue need the identifier, so we need to create identity to our segue from storyboard
                 if isDisplayDetail {
-                    self.performSegue(withIdentifier: "toDetailStorySegue", sender: self)
+
                 }
             }
         }
@@ -100,25 +91,5 @@ class ViewController: UIViewController, UITextViewDelegate, DetailViewController
         return true
     }
     
-    
-    // MARK: - Segue
-    
-    // Now we want to sent the story value to detail page and display it there, so we need this method in order to do that
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailStorySegue" {
-            let detailVC = segue.destination as? DetailViewController
-            detailVC?.storyMessage = story
-            // since we already subscribe the delegate from second page, we need to connect it to here
-            detailVC?.delegate = self
-        }
-    }
-    
-    
-    // MARK: - Our own delegate method
-    
-    // This displayAlert method available to use here, because we already subscribe the delegate from the detail page.
-    func displayAlert() {
-        self.displayAlert(title: "Ok", body: "Yeayyy it works!", isDisplayDetail: false)
-    }
 }
 
